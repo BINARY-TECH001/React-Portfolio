@@ -1,0 +1,70 @@
+nav{
+    background-color: rgba(0, 0, 0, .3);
+    /* width: max-content; */
+    width: 50%;
+    display: block;
+    padding: 1rem 1.7rem;
+    z-index: 2;
+    left: 50%;
+    position: fixed;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    gap: .8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+}
+
+nav a {
+    background-color: transparent;
+    padding: .9rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--color-light);
+    font-size: 1.5rem;
+}
+
+nav a:hover{
+    background-color: rgba(0, 0, 0, .3);
+}
+
+nav a.active{
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) ===============*/
+
+@media screen and (max-width: 1024px){
+    .container{
+        width: var(--container-width-md);
+    }
+
+    section{
+        margin-top: 6rem;
+    }
+}
+
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) ===============*/
+
+@media screen and (max-width: 600px){
+    nav{
+        width: max-content;
+    }
+    h1{
+        font-size: 2.3rem;
+    }
+    
+    h2{
+        font-size: 2.5rem;
+    }
+    
+    h5{
+        font-size: 1rem;
+    }
+    
+}
