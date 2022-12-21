@@ -1,0 +1,89 @@
+@import "../../index.scss";
+
+.navbar__container{
+    @include themify($themes){
+        background-color: themed("bg");
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        position: relative;
+        gap: 6rem;  
+
+        @include mobile{
+            position: fixed;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 1em;
+            bottom: 1em;
+            height: 4rem;
+            width: 90%;
+            gap: .3rem;
+            flex-direction: row;
+            border: 2px solid themed("logo");
+            background-color: themed("lightBg");
+            box-shadow: -9px -10px 100px themed("border"),
+                        30px 30px 100px themed("bgSoft");
+
+          }
+
+          
+          
+    .item{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+        @include mobile{
+            width: 50%;
+        }
+
+        
+        .modeCon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .link{
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 2rem;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        span{
+            font-size: 1rem;
+            text-align: center;
+            color: themed("textColor");
+            font-weight: 700;
+            letter-spacing: 2px;
+
+            @include mobile{
+                display: none;
+              }
+        
+              @include tablet{
+                display: none;
+              }
+        }
+
+
+        .icon{
+            font-size: 2.2rem;
+            color: themed("logo");
+            
+            @include tablet{
+                // margin-: 2rem;
+            }
+        }
+    }
+}
+}

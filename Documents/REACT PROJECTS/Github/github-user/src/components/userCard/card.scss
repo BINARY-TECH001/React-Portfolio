@@ -1,0 +1,181 @@
+@import "../../index.scss";
+
+.userCard__container{
+    @include themify($themes){
+        width: 95%;
+        background: themed("bg");
+        border-radius: 1rem;
+        margin: 6rem auto;
+        padding: 2rem;
+        box-shadow: -2px -2px 10px #c3c3c3,
+        1px 1px 2px #fdfdfd;
+
+        
+        @include mobile{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 95%;
+        }
+
+        h2{
+            font-size: 2rem;
+            color: themed("logo");
+            text-align: left;
+            margin-bottom: 2rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+
+        }
+        
+        .top{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            .topInfo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                
+                @include mobile{
+                    gap: 3rem;
+                }
+                
+                .topDesc{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    
+                    @include mobile{
+                        gap: .5rem;
+                    }
+                    
+                    h3{
+                        color: themed("textColor");
+                        font-size: 2rem;
+                        letter-spacing: 5px;
+                        
+                        @include mobile{
+                            font-size: 1.2rem;
+                        }
+                        @include midScreen {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    span{
+                        color: themed("textColorSoft");
+                        letter-spacing: 3px;
+                        font-weight: 600;
+                    }
+                }
+
+                img{
+                    width: 8rem;
+                    height: 8rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    box-shadow: -2px -2px 10px themed("logo"),
+                    1px 1px 2px themed("border");
+
+                    @include mobile{
+                        width: 8rem;
+                        height: 5rem;
+                    }
+                }
+
+
+                
+            }
+            .link{
+                padding: .6rem;
+                width: 8rem;
+                border-radius: 1rem;
+                color: themed("textColorSoft");
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid themed("logo");
+                font-size: 1.2rem;
+                font-weight: 600;
+                width: 100%;
+                letter-spacing: 3px;
+                margin-top: 1.2rem;
+
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: themed("logo");
+                    color: themed("bg");
+                }
+
+                @include mobile{
+                    margin-top: 1rem;
+                    font-size: 1rem;
+                    width: 100%;
+                }
+
+                @include tablet{
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+
+                @include midScreen {
+                    font-size: 1.3rem;
+                    width: 100%;
+                    letter-spacing: 3px;
+                    margin-top: 1rem;
+                    height: 2.3rem;
+                }
+            }
+        }
+
+        .midCon{
+            display: flex;
+            align-items: flex-start;
+            margin-top: 2rem;
+
+            p{
+                text-align: center;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                color: themed("textColor");
+
+                @include mobile{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            .item{
+                display: flex;
+                gap: 1rem;
+
+
+                .icons{
+                    font-size: 1.8rem;
+                    color: themed('logo');
+                }
+
+                span{
+                    color: themed("textColorSoft");
+                    letter-spacing: 2px;
+                }
+
+                .last{
+                    color: themed("logo");
+                }
+            }
+
+        }
+    }
+}
